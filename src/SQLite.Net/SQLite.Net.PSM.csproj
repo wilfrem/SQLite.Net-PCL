@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1B1E4E48-5A5C-45D5-8B1F-9B86FE26B82B}</ProjectGuid>
+    <ProjectTypeGuids>{69878862-DA7D-4DC6-B0A1-50D8FAB4242F};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SQLite.Net.PSM</RootNamespace>
+    <AssemblyName>SQLite.Net.PSM</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Sce.PlayStation.Core" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Sce\Sce.Psm.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Attributes\" />
+    <Folder Include="Interop\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\AutoIncrementAttribute.cs" />
+    <Compile Include="Attributes\CollationAttribute.cs" />
+    <Compile Include="Attributes\ColumnAttribute.cs" />
+    <Compile Include="Attributes\IgnoreAttribute.cs" />
+    <Compile Include="Attributes\IndexedAttribute.cs" />
+    <Compile Include="Attributes\MaxLengthAttribute.cs" />
+    <Compile Include="Attributes\PrimaryKeyAttribute.cs" />
+    <Compile Include="Attributes\TableAttribute.cs" />
+    <Compile Include="Attributes\UniqueAttribute.cs" />
+    <Compile Include="Interop\ColType.cs" />
+    <Compile Include="Interop\ConfigOption.cs" />
+    <Compile Include="Interop\IDbHandle.cs" />
+    <Compile Include="Interop\IReflectionService.cs" />
+    <Compile Include="Interop\ISQLiteApi.cs" />
+    <Compile Include="Interop\ISQLitePlatform.cs" />
+    <Compile Include="Interop\IStopwatch.cs" />
+    <Compile Include="Interop\IStopwatchFactory.cs" />
+    <Compile Include="Interop\IVolatileService.cs" />
+    <Compile Include="Interop\Result.cs" />
+    <Compile Include="BaseTableQuery.cs" />
+    <Compile Include="CreateTablesResult.cs" />
+    <Compile Include="Orm.cs" />
+    <Compile Include="PreparedSqlLiteInsertCommand.cs" />
+    <Compile Include="SQLiteCommand.cs" />
+    <Compile Include="SQLiteConnection.cs" />
+    <Compile Include="SQLiteConnectionPool.cs" />
+    <Compile Include="SQLiteConnectionString.cs" />
+    <Compile Include="SQLiteConnectionWithLock.cs" />
+    <Compile Include="SQLiteException.cs" />
+    <Compile Include="TableMapping.cs" />
+    <Compile Include="TableQuery.cs" />
+    <Compile Include="Interop\IDbStatement.cs" />
+    <Compile Include="Interop\SQLiteOpenFlags.cs" />
+    <Compile Include="Interop\CreateFlags.cs" />
+  </ItemGroup>
+</Project>
